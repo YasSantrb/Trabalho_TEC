@@ -55,12 +55,14 @@ O modelo demonstrou um desempenho equilibrado e de alta confiabilidade ao ser su
 
 ### Relatório Quantitativo de Métricas
 * **Acurácia Geral (Accuracy)**: 93% 
-* **Precisão (Precision)**: 91% para Fake | [cite_start]96% para True 
-* **Recall (Sensibilidade)**: 96% para Fake | [cite_start]90% para True 
-* **F1-Score**: 94% para Fake | [cite_start]93% para True 
+* **Precisão (Precision)**: 91% para Fake | 96% para True 
+* **Recall (Sensibilidade)**: 96% para Fake | 90% para True 
+* **F1-Score**: 94% para Fake | 93% para True 
 
-### [cite_start]Matriz de Confusão [cite: 78]
+### Matriz de Confusão 
+
+![Matriz de Confusão - Detector de Fake News](img/matriz_confusao.png)
+
 ```text
 [[488   52]   -> [Notícias Verdadeiras Corretas,  Falsos Alertas (Falsos Positivos)]
  [ 20  520]]  -> [Falsos Negativos (Passaram),   Fake News Capturadas Corretamente]
- 
