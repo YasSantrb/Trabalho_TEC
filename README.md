@@ -66,3 +66,130 @@ O modelo demonstrou um desempenho equilibrado e de alta confiabilidade ao ser su
 ```text
 [[488   52]   -> [Notícias Verdadeiras Corretas,  Falsos Alertas (Falsos Positivos)]
  [ 20  520]]  -> [Falsos Negativos (Passaram),   Fake News Capturadas Corretamente]
+```
+
+---
+
+## 🛠️ 6. Tecnologias Utilizadas
+
+As principais tecnologias utilizadas no projeto foram:
+
+- **Python**: linguagem principal usada no desenvolvimento.
+- **TensorFlow/Keras**: criação, treinamento e carregamento do modelo de Deep Learning.
+- **LSTM**: arquitetura de rede neural recorrente usada para lidar com textos e sequências de palavras.
+- **Streamlit**: criação da interface web local para testar notícias manualmente.
+- **NumPy**: manipulação dos dados numéricos e arrays.
+- **Pandas**: leitura, organização e tratamento da base de dados.
+- **Scikit-learn**: separação dos dados e cálculo das métricas de avaliação.
+- **Matplotlib**: geração dos gráficos de desempenho do modelo.
+- **Pickle**: salvamento e carregamento do tokenizer.
+- **GitHub**: hospedagem do código-fonte, documentação e arquivos do projeto.
+
+---
+
+## ▶️ 7. Como Rodar o Projeto
+
+### 1. Baixar o repositório
+
+Você pode baixar o projeto pelo GitHub clicando em:
+
+```bash
+Code > Download ZIP
+```
+
+Depois, extraia a pasta no seu computador.
+
+Se preferir usar Git, execute:
+
+```bash
+git clone https://github.com/YasSantrb/Trabalho_TEC.git
+cd Trabalho_TEC
+```
+
+---
+
+### 2. Criar um ambiente virtual
+
+No terminal, dentro da pasta do projeto, execute:
+
+```bash
+python -m venv venv
+```
+
+Depois ative o ambiente virtual:
+
+No Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+No Linux/Mac:
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+### 3. Instalar as dependências
+
+Com o ambiente virtual ativado, execute:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 4. Conferir a estrutura de arquivos
+
+Para o sistema funcionar, os arquivos do modelo precisam estar dentro da pasta `models/`, seguindo esta estrutura:
+
+```text
+Trabalho_TEC/
+│
+├── app.py
+├── README.md
+├── requirements.txt
+│
+├── models/
+│   ├── modelo_fake_news.keras
+│   └── tokenizer.pickle
+│
+├── data/
+│   └── pre-processed.csv
+│
+└── notebooks/
+    ├── data_preprocessing.ipynb
+    └── model_training.ipynb
+```
+
+---
+
+### 5. Executar a aplicação
+
+Ainda dentro da pasta do projeto, rode o comando:
+
+```bash
+streamlit run app.py
+```
+
+Após isso, o navegador abrirá automaticamente a interface do sistema. Caso não abra, copie o link que aparecer no terminal, geralmente parecido com:
+
+```text
+http://localhost:8501
+```
+
+---
+
+### 6. Usar o detector
+
+Na interface, basta colar uma manchete ou o corpo de uma notícia no campo de texto e clicar em **“Verificar Notícia”**. O sistema irá retornar uma pontuação entre 0 e 1 e indicar se o texto possui maior chance de ser uma notícia verdadeira ou uma fake news.
+
+---
+
+## ⚠️ Observação
+
+O sistema não substitui uma agência de checagem de fatos. Ele analisa padrões textuais aprendidos durante o treinamento, mas não consulta fontes externas em tempo real para confirmar se a notícia é verdadeira ou falsa.
+
